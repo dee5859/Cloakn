@@ -22,8 +22,7 @@ while True:
     
     # Create a mask for the green areas (representing the cloak)
     mask = cv2.inRange(hsv, lower_green, upper_green)
-
-    # Optional: Get the background using background subtraction (helps remove static background)
+    
     background = fgbg.apply(frame)
 
     # Inverse of the mask to get everything except the green areas
